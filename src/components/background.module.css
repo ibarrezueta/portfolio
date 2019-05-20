@@ -1,0 +1,36 @@
+.hidden {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+  font-size: 23px;
+  transition: all 1s;
+  color: white
+}
+
+@keyframes appear {
+  0%{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+    font-size: 23px;
+    color: white;
+  }
+
+  100%{
+    position: absolute;
+    bottom: 500px;
+    left: 600px;
+    opacity: 100%;
+    font-size: 40px;
+    display: block;
+    color: white;
+  }
+}
+
+.onScreen {
+  animation: appear 3s;
+  position: absolute;
+  left: -10px
+}
