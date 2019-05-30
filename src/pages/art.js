@@ -10,25 +10,20 @@ const tallStyle = {
 }
 
 const pageBreak = {
-  height: 600,
+  height: 150,
+  position: 'fixed',
   backgroundColor: 'rgba(255,255,255,.7)',
-  width: '90%',
-  marginLeft: 'auto',
-  marginRight: 'auto',
-  marginTop: 690,
-  borderRadius: 20
+  width: '40%',
+  marginLeft: 350,
+  marginTop: 60,
+  borderRadius: '70%',
+  zIndex: 3
 }
 
 const ArtPage = () => (
   <div>
-  <Background>
-
-  </Background>
-
-  <div style={tallStyle}>
-    <div style={pageBreak} />
-    <City />
-  </div>
+  <Background />
+  <div style={tallStyle} />
   </div>
 )
 

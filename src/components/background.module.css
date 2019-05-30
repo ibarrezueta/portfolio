@@ -20,10 +20,10 @@
 
   100%{
     position: absolute;
-    bottom: 500px;
-    left: 600px;
+    bottom: 400px;
+    left: 300px;
     opacity: 100%;
-    font-size: 40px;
+    font-size: 30px;
     display: block;
     color: white;
   }

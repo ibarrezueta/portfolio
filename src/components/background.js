@@ -6,21 +6,20 @@ class Background extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      colorR: "100",
-      colorG: "100",
-      colorB: "100",
-      colorR2: "200",
-      colorG2: "200",
-      colorB2: "200",
+      colorR: "0",
+      colorG: "191",
+      colorB: "255",
+      colorR2: "52",
+      colorG2: "214",
+      colorB2: "237",
       windowHeight: 500,
       documentHeight: 500,
-      windowBottom: 500
     };
-    this.handleMouseMove = this.handleMouseMove.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
 
   }
   componentDidMount(){
-    window.addEventListener("scroll", this.handleMouseMove);
+    window.addEventListener("scroll", this.handleScroll);
     this.setState(
       {
         windowHeight: document.documentElement.clientHeight,
@@ -48,12 +47,10 @@ class Background extends React.Component{
     );
   }
 
-  handleMouseMove(e){
+  handleScroll(e){
     const totalScroll = this.state.documentHeight - this.state.windowHeight;
     const yCol = Math.floor((e.target.documentElement.scrollTop/totalScroll)*100);
-    console.log(e.target.documentElement.scrollTop)
-    const currentBottom = this.state.windowHeight + e.target.documentElement.scrollTop
-    this.setState({windowBottom: currentBottom})
+
 
     this.updateColor(yCol);
   }
@@ -66,15 +63,10 @@ class Background extends React.Component{
       height: '100%',
       width: '100%',
       position: 'fixed',
-      zIndex: -1000,
+      zIndex: 1,
     }
-    let {windowBottom} = this.state
-    const class_ = (windowBottom > (this.state.documentHeight - 40))? styles.onScreen : styles.hidden;
-    console.log(windowBottom)
-
     return(
-      <div style={style} >{this.props.children}{this.state.windowHeight}
-        <p className={class_}> Z </p>
+      <div style={style} >{this.props.children}
       </div>
     );
   }
