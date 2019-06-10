@@ -1,5 +1,4 @@
 import React from "react"
-import styles from "./background.module.css"
 
 
 class Background extends React.Component{
@@ -19,7 +18,7 @@ class Background extends React.Component{
 
   }
   componentDidMount(){
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll, 10);
     this.setState(
       {
         windowHeight: document.documentElement.clientHeight,
@@ -62,8 +61,7 @@ class Background extends React.Component{
       backgroundImage: linearGradient,
       height: '100%',
       width: '100%',
-      position: 'fixed',
-      zIndex: 1,
+      position: 'fixed'
     }
     return(
       <div style={style} >{this.props.children}

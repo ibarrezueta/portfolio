@@ -8,29 +8,42 @@
   color: white
 }
 
-@keyframes appear {
-  0%{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: none;
-    font-size: 23px;
-    color: white;
-  }
 
-  100%{
-    position: absolute;
-    bottom: 400px;
-    left: 300px;
-    opacity: 100%;
-    font-size: 30px;
-    display: block;
-    color: white;
-  }
+.links {
+  color: black;
+  margin: 15px 22px;
+  font-size: 1.3rem;
+  text-shadow: 0 0;
+  text-decoration: none;
+  background-image: none;
+  transition: all .3s
 }
 
-.onScreen {
-  animation: appear 3s;
-  position: absolute;
-  left: -10px
+a {
+  color: black;
+  margin: 15px 22px;
+  font-size: 1.3rem;
+  text-shadow: 0 0;
+  text-decoration: none;
+  background-image: none;
+  transition: all .3s
+}
+
+a:hover {
+  background-image: linear-gradient(to top, #882938 2px, #EFEFEF 2px, rgba(0, 0, 0, 0) 4px);
+  z-index: 20
+}
+
+.links:hover {
+  background-image: linear-gradient(to top, #882938 2px, #EFEFEF 2px, rgba(0, 0, 0, 0) 4px);
+  z-index: 20
+}
+
+p {
+  position: relative;
+}
+
+.empty {
+  height: 80px;
+  width: 1;
 }

@@ -1,29 +1,136 @@
 import React from "react"
 
 import Background from "../components/background"
-import City from "../components/city"
+import NavBar from "../components/nav-bar"
+import Image from "../components/image"
+
+import styles from "../components/background.module.css"
 
 const tallStyle = {
   height: 3000,
-  overflow: 'scroll',
-  position: 'relative'
+  zIndex: 2,
+  position: 'relative',
+
 }
 
-const pageBreak = {
-  height: 150,
-  position: 'fixed',
-  backgroundColor: 'rgba(255,255,255,.7)',
-  width: '40%',
-  marginLeft: 350,
-  marginTop: 60,
-  borderRadius: '70%',
-  zIndex: 3
+const PageBreak = (props) => {
+  const leftStyle = {
+    height: 400,
+    backgroundColor: 'rgba(255,255,255,.98)',
+    width: '64%',
+    zIndex: 1,
+    marginLeft: '34%',
+    position: 'relative',
+    borderRadius: 20,
+    boxShadow: "0 5px 10px rgba(54,60,85,.5)"
+  };
+
+  const rightStyle = {
+    height: 400,
+    backgroundColor: 'rgba(255,255,255,.98)',
+    width: '50%',
+    zIndex: 1,
+    marginLeft: '2%',
+    position: 'relative',
+    borderRadius: 20,
+    boxShadow: "0 5px 10px rgba(54,60,85,.5)"
+  };
+
+  var chosenStyle = rightStyle;
+
+  if (props.type === 'left'){
+    chosenStyle = leftStyle
+  }
+  return(
+    <div style={chosenStyle}
+    />
+  )
 }
+
+const Footer = () => (
+  <div>
+  <div style={{
+    position: 'absolute',
+    width: 0,
+    height: 0,
+    borderBottom: '280px solid rgba(40,140,55,.7)',
+    borderRight: '800px solid transparent',
+    zIndex: 3,
+    bottom: 0
+  }}/>
+  <div style={{
+    position: 'absolute',
+    width: 0,
+    height: 0,
+    borderBottom: '180px solid rgba(40,90,155, .9)',
+    borderLeft: '800px solid transparent',
+    zIndex: 3,
+    bottom: 0,
+    right: 0
+  }}/>
+  </div>
+)
+
+const Triangle = () => (
+  <div style={{
+    width: 0,
+    height: 0,
+    borderBottom: '680px solid rgba(40,40,255,.07)',
+    borderLeft: '1200px solid transparent',
+  }} />
+)
+
+
 
 const ArtPage = () => (
   <div>
-  <Background />
-  <div style={tallStyle} />
+
+  <Background>
+      <Triangle />
+  </Background>
+  <NavBar />
+  <div>
+  <Image />
+  </div>
+  <div className={styles.empty} />
+  <div style={tallStyle}>
+
+
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <PageBreak type='left'/>
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <PageBreak type='right'/>
+
+    <Footer/>
+    <div style={{
+      position: 'absolute',
+      zIndex: 5,
+      bottom: 0,
+      right: 20
+    }}>
+
+    <a href='https://www.linkedin.com/in/isaac-barrezueta/'> My LinkedIn</a>
+
+    </div>
+
+  </div>
+
+
+
+
   </div>
 )
 
