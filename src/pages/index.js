@@ -1,21 +1,140 @@
 import React from "react"
-import { Link } from "gatsby"
 
-import Layout from "../components/layout"
+import Background from "../components/background"
+import NavBar from "../components/nav-bar"
 import Image from "../components/image"
-import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+import styles from "../components/background.module.css"
+
+const tallStyle = {
+  height: 3000,
+  zIndex: 2,
+  position: 'relative',
+
+}
+
+const PageBreak = (props) => {
+  const leftStyle = {
+    height: 400,
+    backgroundColor: 'rgba(255,255,255,.98)',
+    width: '64%',
+    zIndex: 1,
+    marginLeft: '34%',
+    position: 'relative',
+    borderRadius: 20,
+    boxShadow: "0 5px 10px rgba(54,60,85,.5)",
+    paddingTop: 100
+  };
+
+  const rightStyle = {
+    height: 400,
+    backgroundColor: 'rgba(255,255,255,.98)',
+    width: '50%',
+    zIndex: 1,
+    marginLeft: '2%',
+    position: 'relative',
+    borderRadius: 20,
+    boxShadow: "0 5px 10px rgba(54,60,85,.5)",
+    paddingTop: 100
+  };
+
+  var chosenStyle = rightStyle;
+
+  if (props.type === 'left'){
+    chosenStyle = leftStyle
+  }
+  return(
+    <div style={chosenStyle} id={props.id}
+    />
+  )
+}
+
+const Footer = () => (
+  <div>
+  <div style={{
+    position: 'absolute',
+    width: 0,
+    height: 0,
+    borderBottom: '280px solid rgba(40,140,55,.7)',
+    borderRight: '800px solid transparent',
+    zIndex: 3,
+    bottom: 0
+  }}/>
+  <div style={{
+    position: 'absolute',
+    width: 0,
+    height: 0,
+    borderBottom: '180px solid rgba(40,90,155, .9)',
+    borderLeft: '800px solid transparent',
+    zIndex: 3,
+    bottom: 0,
+    right: 0
+  }}/>
+  </div>
 )
 
-export default IndexPage
+const Triangle = () => (
+  <div style={{
+    width: 0,
+    height: 0,
+    borderBottom: '680px solid rgba(40,40,255,.07)',
+    borderLeft: '1200px solid transparent',
+  }} />
+)
+
+
+
+const ArtPage = () => (
+  <div>
+
+  <Background>
+      <Triangle />
+  </Background>
+  <NavBar />
+  <div>
+  <Image />
+  </div>
+
+  <div style={tallStyle}>
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <PageBreak type='left' id="aboutme"/>
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <div className={styles.empty} />
+    <PageBreak type='right' id="mywork"/>
+
+    <Footer/>
+    <div style={{
+      position: 'absolute',
+      zIndex: 5,
+      bottom: 0,
+      right: 20
+    }}>
+
+    <a href='https://www.linkedin.com/in/isaac-barrezueta/' id="sayhello"> My LinkedIn</a>
+
+    </div>
+
+  </div>
+
+
+
+
+  </div>
+)
+
+export default ArtPage
