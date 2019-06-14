@@ -16,24 +16,24 @@ const tallStyle = {
 const PageBreak = (props) => {
   const leftStyle = {
     height: 400,
-    backgroundColor: 'rgba(255,255,255,.98)',
+    backgroundColor: 'rgba(255,255,255,.38)',
     width: '64%',
     zIndex: 1,
     marginLeft: '34%',
     position: 'relative',
-    borderRadius: 20,
+
     boxShadow: "0 5px 10px rgba(54,60,85,.5)",
     paddingTop: 100
   };
 
   const rightStyle = {
     height: 400,
-    backgroundColor: 'rgba(255,255,255,.98)',
+    backgroundColor: 'rgba(255,255,255,.38)',
     width: '50%',
     zIndex: 1,
     marginLeft: '2%',
     position: 'relative',
-    borderRadius: 20,
+  
     boxShadow: "0 5px 10px rgba(54,60,85,.5)",
     paddingTop: 100
   };
@@ -101,16 +101,7 @@ const ArtPage = () => (
     <div className={styles.empty} />
     <div className={styles.empty} />
     <div className={styles.empty} />
-    <div className={styles.empty} />
-    <div className={styles.empty} />
-    <div className={styles.empty} />
-    <div className={styles.empty} />
-    <div className={styles.empty} />
     <PageBreak type='left' id="aboutme"/>
-    <div className={styles.empty} />
-    <div className={styles.empty} />
-    <div className={styles.empty} />
-    <div className={styles.empty} />
     <div className={styles.empty} />
     <div className={styles.empty} />
     <div className={styles.empty} />
