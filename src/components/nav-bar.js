@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from "gatsby"
 import styles from "./background.module.css"
 
 if (typeof window !== 'undefined') {
@@ -9,7 +8,7 @@ if (typeof window !== 'undefined') {
 }
 
 const PageLink = props => (
-  <Link className={styles.links} to={props.id}> {props.name} </Link>
+  <a className={styles.links} to={props.id}> {props.name} </a>
 )
 
 class NavBar extends React.Component{

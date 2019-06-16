@@ -3,6 +3,7 @@ import React from "react"
 import Background from "../components/background"
 import NavBar from "../components/nav-bar"
 import Image from "../components/image"
+import resume from "../images/resuMAY.pdf"
 
 import styles from "../components/background.module.css"
 
@@ -33,7 +34,7 @@ const PageBreak = (props) => {
     zIndex: 1,
     marginLeft: '2%',
     position: 'relative',
-  
+
     boxShadow: "0 5px 10px rgba(54,60,85,.5)",
     paddingTop: 100
   };
@@ -82,7 +83,12 @@ const Triangle = () => (
   }} />
 )
 
+const ResumeButton = () => (
+  <a className={styles.resume} href={resume}>
+  resume
+  </a>
 
+)
 
 const ArtPage = () => (
   <div>
@@ -91,10 +97,9 @@ const ArtPage = () => (
       <Triangle />
   </Background>
   <NavBar />
-  <div>
   <Image />
-  </div>
-
+  <a style={{position: 'absolute', right: '20%', top: '40%', zIndex: 5}}href={'https://www.linkedin.com/in/isaac-barrezueta/'} id="sayhello"> My LinkedIn</a>
+  <ResumeButton/>
   <div style={tallStyle}>
     <div className={styles.empty} />
     <div className={styles.empty} />
@@ -114,11 +119,7 @@ const ArtPage = () => (
       zIndex: 5,
       bottom: 0,
       right: 20
-    }}>
-
-    <a href='https://www.linkedin.com/in/isaac-barrezueta/' id="sayhello"> My LinkedIn</a>
-
-    </div>
+    }}/>
 
   </div>
 
