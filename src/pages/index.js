@@ -6,6 +6,7 @@ import Image from "../components/image"
 import resume from "../images/resuMAY.pdf"
 
 import styles from "../components/background.module.css"
+import SEO from "../components/seo"
 
 const tallStyle = {
   height: 3000,
@@ -92,6 +93,7 @@ const ResumeButton = () => (
 
 const ArtPage = () => (
   <div>
+  <SEO title="Isaac Barrezueta's Portfolio" />
 
   <Background>
       <Triangle />
