@@ -70,7 +70,7 @@
   width: 0px;
   height: 0px;
   border-bottom: 280px solid rgba(40, 140, 55, 0.7);
-  border-right: 800px solid transparent;
+  border-right: 80vw solid transparent;
   z-index: 3;
   bottom: 0px;
 }
@@ -80,7 +80,7 @@
   width: 0px;
   height: 0px;
   border-bottom: 180px solid rgba(40, 90, 155, 0.9);
-  border-left: 800px solid transparent;
+  border-left: 80vw solid transparent;
   z-index: 3;
   bottom: 0px;
   right: 0px;

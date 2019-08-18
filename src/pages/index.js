@@ -33,7 +33,7 @@ const Triangle = () => (
       width: 0,
       height: 0,
       borderBottom: "680px solid rgba(40,40,255,.07)",
-      borderLeft: "1200px solid transparent",
+      borderLeft: "100vw solid transparent",
     }}
   />
 )
