@@ -2,7 +2,7 @@ import React from "react"
 import Background from "../components/background"
 import NavBar from "../components/nav-bar"
 import Image from "../components/image"
-import resume from "../images/resum8.pdf"
+import resume from "../images/Resum8.pdf"
 import styles from "../components/background.module.css"
 import SEO from "../components/seo"
 
