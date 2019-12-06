@@ -1,7 +1,6 @@
 import React from "react"
 import Background from "../components/background"
 import NavBar from "../components/nav-bar"
-import Image from "../components/image"
 import resume from "../images/Resum8.pdf"
 import styles from "../components/background.module.css"
 import SEO from "../components/seo"
@@ -52,7 +51,6 @@ const ArtPage = () => (
       <Triangle />
     </Background>
     <NavBar />
-    <Image />
     <a
       style={{ position: "absolute", right: "20%", top: "40%", zIndex: 5 }}
       href={"https://www.linkedin.com/in/isaac-barrezueta/"}
