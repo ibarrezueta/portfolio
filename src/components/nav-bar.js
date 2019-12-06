@@ -18,7 +18,6 @@ class NavBar extends React.Component{
       <div style={{position: 'fixed', width: '100%', display:'flex', justifyContent: 'flex-end', height: 65, zIndex: 10, }}>
       <PageLink name="About Me" id="#aboutme"/>
       <PageLink name="My Work" id="#mywork"/>
-      <PageLink name="Say Hello" id="#sayhello"/>
       </div>
     );
   }

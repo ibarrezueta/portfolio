@@ -1,23 +1,12 @@
 import React from "react"
 import Background from "../components/background"
 import NavBar from "../components/nav-bar"
+import Image from "../components/image"
+import Image2 from "../components/image2"
 import resume from "../images/Resum8.pdf"
 import styles from "../components/background.module.css"
 import SEO from "../components/seo"
 
-const tallStyle = { height: 3000, zIndex: 2, position: "relative" }
-
-const PageBreak = props => {
-  const leftStyle = styles.leftStyle
-  const rightStyle = styles.rightStyle
-  var chosenStyle = rightStyle
-
-  if (props.type === "left") {
-    chosenStyle = leftStyle
-  }
-
-  return <div className={chosenStyle} id={props.id} />
-}
 
 const Footer = () => (
   <div>
@@ -31,7 +20,7 @@ const Triangle = () => (
     style={{
       width: 0,
       height: 0,
-      borderBottom: "680px solid rgba(40,40,255,.07)",
+      borderBottom: "100vw solid rgba(40,40,255,.07)",
       borderLeft: "100vw solid transparent",
     }}
   />
@@ -51,27 +40,30 @@ const ArtPage = () => (
       <Triangle />
     </Background>
     <NavBar />
+
     <a
       style={{ position: "absolute", right: "20%", top: "40%", zIndex: 5 }}
       href={"https://www.linkedin.com/in/isaac-barrezueta/"}
-      id="sayhello"
     >
       {" "}
       My LinkedIn
     </a>
     <ResumeButton />
-    <div style={tallStyle}>
-      <div className={styles.empty} />
-      <div className={styles.empty} />
-      <div className={styles.empty} />
-      <div className={styles.empty} />
-      <div className={styles.empty} />
-      <PageBreak type="left" id="aboutme" />
-      <div className={styles.empty} />
-      <div className={styles.empty} />
-      <div className={styles.empty} />
-      <div className={styles.empty} />
-      <PageBreak type="right" id="mywork" />
+    <div style={{height: "300vh", position:"relative"}}>
+      <div style={{paddingTop: "50vw"}}>
+        <h1 style={{marginLeft: "5em"}} id="aboutme"> About Me </h1>
+        <p style={{marginLeft: "12em", marginRight: "12em"}}>
+          I'm a Senior in Allegheny College with interests in Art, Music, and Computer Science.
+        </p>
+      </div>
+      <h1 style={{marginLeft: "5em"}} id="mywork"> My Projects </h1>
+      <p style={{marginLeft: "12em", marginRight: "12em"}}>
+        My most recent project, <a href="https://github.com/barrezuetai/synesthesia">Synesthesia</a>, involves using Processing, a Java based langauge
+        and software, and Ableton Live in order to create art based on midi inputs.
+        Below are some pieces I was able to make using the program.
+      </p>
+      <Image/>
+      <Image2/>
 
       <Footer />
       <div

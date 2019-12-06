@@ -15,13 +15,7 @@ class Background extends React.Component {
     }
     this.handleScroll = this.handleScroll.bind(this)
   }
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll, 10)
-    this.setState({
-      windowHeight: document.documentElement.clientHeight,
-      documentHeight: document.documentElement.offsetHeight,
-    })
-  }
+  
 
   updateColor(c) {
     const color1 = 9.9 * c + -0.0968 * c ** 2
