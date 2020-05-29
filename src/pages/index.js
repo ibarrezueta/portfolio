@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import screen from '../assets/images/screen.png';
 import pic2 from '../assets/images/pic02.jpg';
 import pic3 from '../assets/images/pic03.png';
-import resume from "../assets/images/ResuMAY.pdf"
+import resume from "../assets/images/resume.pdf"
 import { Link } from 'gatsby';
 
 const IndexPage = () => (
