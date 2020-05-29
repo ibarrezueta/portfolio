@@ -1,14 +1,19 @@
-import React from "react"
+import React from 'react';
 
-import Background from "../components/background"
-import SEO from "../components/seo"
+import Layout from '../components/Layout';
 
-const NotFoundPage = () => (
-  <Background>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Background>
-)
+const IndexPage = () => (
+  <Layout>
+    <section id="one" className="wrapper">
+      <header className="major">
+        <h2>
+          Page not found
+          <br />
+          Not a valid URL
+        </h2>
+      </header>
+    </section>
+  </Layout>
+);
 
-export default NotFoundPage
+export default IndexPage;

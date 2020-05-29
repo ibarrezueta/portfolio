@@ -1,81 +1,152 @@
-import React from "react"
-import Background from "../components/background"
-import NavBar from "../components/nav-bar"
-import Image from "../components/image"
-import Image2 from "../components/image2"
-import resume from "../images/Resum8.pdf"
-import styles from "../components/background.module.css"
-import SEO from "../components/seo"
+import React from 'react';
 
+import Layout from '../components/Layout';
+import Scroll from '../components/Scroll';
 
-const Footer = () => (
-  <div>
-    <div className={styles.triangle1} />
-    <div className={styles.triangle2} />
-  </div>
-)
+import config from '../../config';
+import Footer from '../components/Footer';
+import screen from '../assets/images/screen.png';
+import pic2 from '../assets/images/pic02.jpg';
+import pic3 from '../assets/images/pic03.png';
+import resume from "../assets/images/ResuMAY.pdf"
+import { Link } from 'gatsby';
 
-const Triangle = () => (
-  <div
-    style={{
-      width: 0,
-      height: 0,
-      borderBottom: "100vw solid rgba(40,40,255,.07)",
-      borderLeft: "100vw solid transparent",
-    }}
-  />
-)
+const IndexPage = () => (
+  <Layout>
+    <header id="header">
+      <div className="content">
+        <h1>
+          <a href="/#">{config.heading}</a>
+        </h1>
+        <p>{config.subHeading}</p>
+        <ul className="actions">
+          <li>
+            <a
+              href={resume}
+              className="button primary icon fa-download"
+            >
+              Open Resume
+            </a>
+          </li>
+          <li>
+            <Scroll type="id" element="one">
+              <a href="#one" className="button icon fa-chevron-down">
+                Learn More
+              </a>
+            </Scroll>
+          </li>
+        </ul>
+      </div>
+      <div className="image phone">
+        <div className="inner">
+          <img src={screen} alt="" />
+        </div>
+      </div>
+    </header>
 
-const ResumeButton = () => (
-  <a className={styles.resume} href={resume}>
-    resume
-  </a>
-)
+    <section id="one" className="wrapper style2 special">
+      <header className="major">
+        <h2>
+          About Me
+        </h2>
+      </header>
+      <div className="inner alt">
+      <div className="content">
 
-const ArtPage = () => (
-  <div>
-    <SEO title="Isaac Barrezueta's Portfolio" />
-
-    <Background>
-      <Triangle />
-    </Background>
-    <NavBar />
-
-    <a
-      style={{ position: "absolute", right: "20%", top: "40%", zIndex: 5 }}
-      href={"https://www.linkedin.com/in/isaac-barrezueta/"}
-    >
-      {" "}
-      My LinkedIn
-    </a>
-    <ResumeButton />
-    <div style={{height: "300vh", position:"relative"}}>
-      <div style={{paddingTop: "50vw"}}>
-        <h1 style={{marginLeft: "5em"}} id="aboutme"> About Me </h1>
-        <p style={{marginLeft: "12em", marginRight: "12em"}}>
-          I'm a Senior in Allegheny College with interests in Art, Music, and Computer Science.
+      <p>
+          My name is Isaac and I recently graduated from Allegheny College. In the past, I've worked on many projects that range from front end development to working
+          with databases and APIs. My professional experience involves co-teaching a Web Development
+          bootcamp in NYC in which we went over HTML/CSS/JS and Ruby on Rails. I'm starting a position
+          with American Express as a software engineer in the fall. I've worked on many projects that involved data visualization.
+          These projects varied from representing musical notes on a keyboard as colors and shapes over a projector to extracting data from tweets
+          to create a series of graphs comparing sentiment between two hashtags.
         </p>
       </div>
-      <h1 style={{marginLeft: "5em"}} id="mywork"> My Projects </h1>
-      <p style={{marginLeft: "12em", marginRight: "12em"}}>
-        My most recent project, <a href="https://github.com/barrezuetai/synesthesia">Synesthesia</a>, involves using Processing, a Java based langauge
-        and software, and Ableton Live in order to create art based on midi inputs.
-        Below are some pieces I was able to make using the program.
-      </p>
-      <Image/>
-      <Image2/>
+      </div>
+    </section>
 
-      <Footer />
-      <div
-        style={{
-          position: "absolute",
-          zIndex: 5,
-          bottom: 0,
-          right: 20,
-        }}
-      />
-    </div>
-  </div>
-)
+    <section id="two" className="wrapper">
+    <header className="major">
+        <h2>
+          My Projects
+        </h2>
+      </header>
+      <div className="inner alt">
+        <section className="spotlight">
+          <div className="image">
+            <img src="https://media.giphy.com/media/VhoziXpdEL0DS54jak/source.mp4" alt="" />
+          </div>
+          <div className="content">
+            <h3>Scheduler</h3>
+            <p>
+              Tired of manually figuring out daily room schedules at my last job, I sought to create a program that could assign staff to each room
+              given time conditions for each person and room. The result is this web application leveraging streamlit's library and python3. This one
+              is still being worked on in order to abstract it to as many rooms as you need all with different time conditions. If you have experience
+              creating API's or working with scheduling algorithms, this is a good project to try and contribute to.
+            </p>
+          </div>
+        </section>
+        <section className="spotlight">
+          <div className="image">
+            <img src="https://media.giphy.com/media/lSU9A3WvzwGH3Bm6sd/giphy.gif" alt="" />
+          </div>
+          <div className="content">
+            <h3>Synesthesia</h3>
+            <p>
+            Using Processing and themidibus, I was able to take input from a midi keyboard and turn the notes into a colorful visual representation.
+            The shapes, sizes, and shakiness correlate with the number of notes being played at a time and how loud each note is being played.
 
-export default ArtPage
+            </p>
+          </div>
+        </section>
+        <section className="spotlight">
+          <div className="image">
+            <img src={pic3} alt="" />
+          </div>
+          <div className="content">
+            <h3>GatorGrouper</h3>
+            <p>
+              Contributed to an opensource project that used grouping algorithms to designate people into balaced
+              teams based on individuals' traits. Used Django to create a CRUD application for users (professors) to
+              be able to create different groups for different assignments and classes.
+            </p>
+          </div>
+        </section>
+        <section className="special">
+          <ul className="icons labeled">
+          <li>
+              <span className="icon fa-code">
+                <span className="label">Object Oriented Programming</span>
+              </span>
+            </li>
+            <li>
+              <span className="icon fa-code">
+                <span className="label">React/Django</span>
+              </span>
+            </li>
+            <li>
+              <span className="icon fa-code">
+                <span className="label">HTML/CSS/JS</span>
+              </span>
+            </li>
+            <li>
+              <span className="icon fa-code">
+                <span className="label">Python/Java</span>
+              </span>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section id="three" className="wrapper style2 special">
+      <header className="major">
+        <h2>Check out more of my projects at github</h2>
+      </header>
+    </section>
+
+    <Footer />
+  </Layout>
+);
+
+export default IndexPage;
