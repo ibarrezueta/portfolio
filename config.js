@@ -3,7 +3,7 @@ module.exports = {
   manifestName: 'Isaac Barrezueta: Portfolio',
   manifestShortName: 'barrezuetai', // max 12 characters
   manifestStartUrl: '/',
-  manifestBackgroundColor: '#663399',
+  manifestBackgroundColor: '#345c71',
   manifestThemeColor: '#663399',
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/website-icon.png',
