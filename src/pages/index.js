@@ -21,14 +21,6 @@ const IndexPage = () => (
         <p>{config.subHeading}</p>
         <ul className="actions">
           <li>
-            <a
-              href={resume}
-              className="button primary icon fa-download"
-            >
-              Open Resume
-            </a>
-          </li>
-          <li>
             <Scroll type="id" element="one">
               <a href="#one" className="button icon fa-chevron-down">
                 Learn More
@@ -54,12 +46,11 @@ const IndexPage = () => (
       <div className="content">
 
       <p>
-          My name is Isaac and I recently graduated from Allegheny College. In the past, I've worked on many projects that range from front end development to working
-          with databases and APIs. My professional experience involves co-teaching a Web Development
-          bootcamp in NYC in which we went over HTML/CSS/JS and Ruby on Rails. I'm starting a position
-          with American Express as a software engineer in the fall. I've worked on many projects that involved data visualization.
-          These projects varied from representing musical notes on a keyboard as colors and shapes over a projector to extracting data from tweets
-          to create a series of graphs comparing sentiment between two hashtags.
+      My name is Isaac and I’m a recent graduate of Allegheny College’s Class of 2020. I've worked on many projects that range from front-end development
+      to working with databases and APIs. I've also worked on projects that involved data visualization; these projects varied from representing musical
+      notes from a keyboard as colors and shapes through a projector, to extracting data from Twitter to create a series of comparative graphs between
+      two popular hashtags. My professional experience involves co-teaching a web development bootcamp in New York City where the curriculum covered
+      HTML/CSS/JS and Ruby on Rails software. This coming fall I’ll be starting as a software engineer with American Express.
         </p>
       </div>
       </div>
@@ -79,10 +70,11 @@ const IndexPage = () => (
           <div className="content">
             <h3>Scheduler</h3>
             <p>
-              Tired of manually figuring out daily room schedules at my last job, I sought to create a program that could assign staff to each room
-              given time conditions for each person and room. The result is this web application leveraging streamlit's library and python3. This one
-              is still being worked on in order to abstract it to as many rooms as you need all with different time conditions. If you have experience
-              creating API's or working with scheduling algorithms, this is a good project to try and contribute to.
+            At my previous job, I came across a frustrating problem: when figuring out the daily schedules for all the rooms in the building,
+            I’d have to do so manually. This was a tedious and repetitive process, so I sought to create a program that could assign staff to
+            rooms given time conditions for each person and each room. The result is this web application leveraging Streamlit’s library and
+            Python3. The application is currently being worked on to abstract it to as many rooms as you need with all the different time
+            conditions. If you have experience creating APIs or working with scheduling algorithms, this is a great project to contribute to.
             </p>
           </div>
         </section>
@@ -93,8 +85,9 @@ const IndexPage = () => (
           <div className="content">
             <h3>Synesthesia</h3>
             <p>
-            Using Processing and themidibus, I was able to take input from a midi keyboard and turn the notes into a colorful visual representation.
-            The shapes, sizes, and shakiness correlate with the number of notes being played at a time and how loud each note is being played.
+            Using Processing and The Midibus, I was able to take input from a midi-keyboard and create a colorful visual representation of
+            the notes being played on my piano. The shapes, sizes, and shakiness correlate with the number of notes being played at a time
+            and how loudly each note is being played.
 
             </p>
           </div>
@@ -106,9 +99,9 @@ const IndexPage = () => (
           <div className="content">
             <h3>GatorGrouper</h3>
             <p>
-              Contributed to an opensource project that used grouping algorithms to designate people into balaced
-              teams based on individuals' traits. Used Django to create a CRUD application for users (professors) to
-              be able to create different groups for different assignments and classes.
+            I contributed to an open source project that used grouping algorithms to designate people into balanced teams
+            based on individuals' traits. Django was used to create a CRUD application for users (in this case, Professors)
+            to be able to create different online groups for different assignments and classes.
             </p>
           </div>
         </section>
