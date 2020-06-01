@@ -134,7 +134,7 @@ const IndexPage = () => (
 
     <section id="three" className="wrapper style2 special">
       <header className="major">
-        <h2>Check out more of my projects at github</h2>
+        <h2>Check out more of my projects at GitHub</h2>
       </header>
     </section>
 
